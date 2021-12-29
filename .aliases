@@ -1,0 +1,55 @@
+#!/bin/bash
+
+# Formatted ls with storage
+alias l="ls -lah"
+
+pbcopy() {
+	stdin=$(</dev/stdin);
+	pbcopy="$(which pbcopy)";
+	if [[ -n "$pbcopy" ]]; then
+		echo "$stdin" | "$pbcopy"
+	else
+		echo "$stdin" | xclip -selection clipboard
+	fi
+}
+pbpaste() {
+	pbpaste="$(which pbpaste)";
+	if [[ -n "$pbpaste" ]]; then
+		"$pbpaste"
+	else
+		xclip -selection clipboard
+	fi
+}
+
+# Better directory commands
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias ~="cd ~" # `cd` is probably faster to type though
+alias -- -="cd -"
+
+# Colored grep output
+alias grep='grep --color=auto '
+
+# IP addresses
+alias pubip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias localip="sudo ifconfig | grep -Eo 'inet (addr:)?([0-9]*\\.){3}[0-9]*' | grep -Eo '([0-9]*\\.){3}[0-9]*' | grep -v '127.0.0.1'"
+alias ips="sudo ifconfig -a | grep -o 'inet6\\? \\(addr:\\)\\?\\s\\?\\(\\(\\([0-9]\\+\\.\\)\\{3\\}[0-9]\\+\\)\\|[a-fA-F0-9:]\\+\\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
+
+
+# View HTTP traffic
+alias sniff="sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
+alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\\: .*|GET \\/.*\""
+
+# copy working directory
+alias cwd='pwd | tr -d "\r\n" | xclip -selection clipboard'
+
+# Hosts
+alias hosts='sudo vim /etc/hosts'
+
+# Blender
+alias blender='/Applications/Blender.app/Contents/MacOS/Blender'
+
+# Figma
+alias figma='/Applications/Figma.app/Contents/MacOS/Figma'
