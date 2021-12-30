@@ -29,6 +29,9 @@ alias .....="cd ../../../.."
 alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
+# Intellij
+alias ij="/usr/local/bin/idea"
+
 # Colored grep output
 alias grep='grep --color=auto '
 
