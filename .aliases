@@ -51,8 +51,5 @@ alias cwd='pwd | tr -d "\r\n" | xclip -selection clipboard'
 # Hosts
 alias hosts='sudo vim /etc/hosts'
 
-# Blender
-alias blender='/Applications/Blender.app/Contents/MacOS/Blender'
-
 # Figma
 alias figma='/Applications/Figma.app/Contents/MacOS/Figma'
