@@ -61,7 +61,7 @@ Plugin 'tpope/vim-commentary'
 Plugin 'haya14busa/vim-asterisk'
 Plugin 'inside/vim-search-pulse'
 Plugin 'uarun/vim-protobuf'
-Plugin 'w0rp/ale'
+Plugin 'dense-analysis/ale'
 Plugin 'vim-test/vim-test'
 Plugin 'ruanyl/vim-gh-line'
 Plugin 'preservim/tagbar'
@@ -106,11 +106,6 @@ autocmd! User GoyoEnter nested call <SID>goyo_enter()
 autocmd! User GoyoLeave nested call <SID>goyo_leave()
 
 let g:vim_jsx_pretty_colorful_config = 1 " default 0
-
-" Ale
-call plug#begin('~/.vim/plugged')
- Plug 'w0rp/ale'
-call plug#end()
 
 let g:ale_fixers = {
  \ 'javascript': ['eslint', 'prettier']
