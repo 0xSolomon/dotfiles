@@ -77,6 +77,9 @@ Plugin 'kyazdani42/nvim-web-devicons'
 Plugin 'romgrk/barbar.nvim'
 Plugin 'NLKNguyen/papercolor-theme'
 Plugin 'iamcco/markdown-preview.nvim'
+Plugin 'projekt0n/github-nvim-theme'
+Plugin 'vyperlang/vim-vyper'
+Plugin 'dmdque/solidity.vim'
 
 
 
@@ -177,7 +180,8 @@ let g:go_highlight_variable_assignments = 1
 syntax on
 
 set background=dark
-colorscheme everforest
+colorscheme github_*
+"colorscheme everforest
 set t_Co=256
 
 " Settings
@@ -298,4 +302,3 @@ au FileType python setlocal formatprg=autopep8\ -
 set shell=zsh
 
 let g:coc_node_path = trim(system('which node'))
-
