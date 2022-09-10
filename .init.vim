@@ -34,8 +34,6 @@ Plugin 'dracula/vim'
 Plugin 'fatih/vim-go', {'do':':GoInstallBinaries'}
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-surround'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'xolox/vim-notes'
 Plugin 'xolox/vim-misc'
@@ -80,8 +78,7 @@ Plugin 'iamcco/markdown-preview.nvim'
 Plugin 'projekt0n/github-nvim-theme'
 Plugin 'vyperlang/vim-vyper'
 Plugin 'dmdque/solidity.vim'
-
-
+Plugin 'folke/tokyonight.nvim', { 'branch': 'main' }
 
 " Js
 Plugin 'mxw/vim-jsx'
@@ -129,23 +126,8 @@ let g:ale_fix_on_save = 1
 Plugin 'raimon49/requirements.txt.vim', {'for':'requirements'}
 Plugin 'Chiel92/vim-autoformat'
 
-
-" let g:lightline = {
-"		\ 'colorscheme': 'gruvbox',
-"		\ 'background': 'dark'
-"		\  }
-set laststatus=2 " for airline
-
-
-" func! s:my_color_setup() abort
-"	hi Pmenu guibg=#D3D3D3
-"	hi PmenuSel guibg=#D3D3D3
-"	hi Visual cterm=reverse ctermbg=0 ctermfg=NONE guibg=Grey40
-"endfunc
-
-" augroup colorscheme_coc_setup | au!
-"	au ColorScheme * call s:my_color_setup()
-"augroup end
+" Vim Script
+let g:lightline = {'colorscheme': 'tokyonight'}
 
 if (has("nvim"))
   "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
@@ -180,8 +162,9 @@ let g:go_highlight_variable_assignments = 1
 syntax on
 
 set background=dark
-colorscheme github_*
-"colorscheme everforest
+" colorscheme github_*
+" colorscheme everforest
+colorscheme tokyonight-night
 set t_Co=256
 
 " Settings
