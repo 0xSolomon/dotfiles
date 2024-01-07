@@ -53,3 +53,9 @@ alias hosts='sudo vim /etc/hosts'
 
 # Figma
 alias figma='/Applications/Figma.app/Contents/MacOS/Figma'
+
+# Python
+alias python='/usr/bin/python3'
+
+# Nvim
+alias n='nvim'
