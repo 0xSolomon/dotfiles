@@ -29,6 +29,9 @@ alias .....="cd ../../../.."
 alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
+# Copying
+alias pc="pbcopy < "
+
 # Intellij
 alias ij="/usr/local/bin/idea"
 
